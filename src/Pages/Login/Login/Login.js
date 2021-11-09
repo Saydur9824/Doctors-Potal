@@ -12,8 +12,8 @@ import Alert from '@mui/material/Alert';
 
 const Login = () => {
     const[loginData, setLoginData] = useState({})
-    const{user, loginUser, isLoading,signInWithGoogle, authError} = useAuth();
-
+    const{user, loginUser, signInWithGoogle, isLoading, authError} = useAuth();
+console.log(signInWithGoogle)
     const location = useLocation();
     const history = useHistory();
 
@@ -73,7 +73,7 @@ const Login = () => {
                     {authError &&  <Alert severity="error">{authError}</Alert>}
                 </form>
                 <p>-----------------------------</p>
-                <Button onclick= {handleGoogleSignIn} variant="contained">Sign in Google</Button>
+                <Button onClick= {handleGoogleSignIn} variant="contained">Sign in Google</Button>
                 </Grid>
                 <Grid item xs={12} md ={6}>
                     <img style = {{width:'100%'}} src ={login} alt = '' />

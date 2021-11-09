@@ -45,7 +45,7 @@ const BookingModal = ({openBooking, handleBookingClose, booking, date,setBooking
         }
 
         // send to the server
-        fetch('http://localhost:5000/appointments', {
+        fetch('https://damp-falls-81233.herokuapp.com/appointments', {
           method : 'POST',
           headers: {
             'content-type' : 'application/json'
