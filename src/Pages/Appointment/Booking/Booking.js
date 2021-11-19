@@ -1,13 +1,13 @@
 import { Grid } from '@mui/material';
 import React from 'react';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import BookingModal from '../BookingModal/BookingModal';
 
 const Booking = ({booking, date, setBookingSuccess}) => {
-    const {name, time, space} = booking;
+    const {name, time, space, price} = booking;
     const [openBooking, setOpenBooking] = React.useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
     const handleBookingClose = () => setOpenBooking(false);
@@ -21,6 +21,9 @@ const Booking = ({booking, date, setBookingSuccess}) => {
                 </Typography>
                 <Typography variant="h6" gutterBottom component="div">
                     {time}
+                </Typography>
+                <Typography variant="caption" display="block" gutterBottom>
+                    price $ {price}
                 </Typography>
                 <Typography variant="caption" display="block" gutterBottom>
                     {space} SPACES AVAILABLE
